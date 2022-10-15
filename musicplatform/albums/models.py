@@ -10,6 +10,9 @@ class Album(models.Model):
     artist = models.ForeignKey(
         Artist, on_delete=models.CASCADE, null=True, related_name="albums"
     )
+    is_approved = models.BooleanField(
+        default=False, help_text=" Approve the album if its name is not explicit"
+    )
 
     def __str__(self):
         return self.name
