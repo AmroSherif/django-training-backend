@@ -14,6 +14,6 @@ class ArtistAdmin(admin.ModelAdmin):
     inlines = [AlbumTabular]
 
     def get_albums_count(self, obj):
-        return obj.albums.count()
+        return obj.albums.filter(is_approved=True).count()
 
     get_albums_count.short_description = "Approved albums"
