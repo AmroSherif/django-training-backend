@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "backend-tasks"
+version = "0.1.0"
+description = ""
+authors = ["Amro Sherif <amro201762@bue.edu.eg>"]
+readme = "README.md"
+packages = [{include = "backend_tasks"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Django = "^4.1.2"
+django-dotenv = "^1.4.2"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^22.10.0", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
