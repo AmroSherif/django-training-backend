@@ -1,7 +1,8 @@
 from django.db import models
+from users.models import ExtendedUser
 
 
-class Artist(models.Model):
+class Artist(ExtendedUser, models.Model):
     stage_name = models.CharField(max_length=30, unique=True)
     social_link = models.URLField(max_length=200, blank=True)
 
